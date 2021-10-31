@@ -1,0 +1,11 @@
+{
+  "AppSyncApiName": "medilife",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authmedilife86e42e8786e42e87",
+      "Outputs.UserPoolId"
+    ]
+  }
+}

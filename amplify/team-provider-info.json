@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-medilife-dev-174818-authRole",
+      "UnauthRoleArn": "arn:aws:iam::665783010775:role/amplify-medilife-dev-174818-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::665783010775:role/amplify-medilife-dev-174818-authRole",
+      "Region": "ap-south-1",
+      "DeploymentBucketName": "amplify-medilife-dev-174818-deployment",
+      "UnauthRoleName": "amplify-medilife-dev-174818-unauthRole",
+      "StackName": "amplify-medilife-dev-174818",
+      "StackId": "arn:aws:cloudformation:ap-south-1:665783010775:stack/amplify-medilife-dev-174818/7d083240-300d-11ec-b7da-0257c5b15a04",
+      "AmplifyAppId": "d2aux8k03qxsi8"
+    },
+    "categories": {
+      "function": {
+        "medilife86e42e8786e42e87PostConfirmation": {
+          "deploymentBucketName": "amplify-medilife-dev-174818-deployment",
+          "s3Key": "amplify-builds/medilife86e42e8786e42e87PostConfirmation-3663456a637a426f6870-build.zip"
+        }
+      },
+      "auth": {
+        "medilife86e42e8786e42e87": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+type User @model {
+  id: ID!
+  username: String!
+  email: String!
+
+  bookings: [Booking] @connection(keyName: "byUser", fields: ["id"])
+}
+
+type Ambulance @model {
+  id: ID!
+  latitude: Float,
+  longitude: Float,
+  heading: Float,
+
+  bookings: [Booking] @connection(keyName: "byAmbulance", fields: ["id"])
+}
+
+type Booking @model 
+@key(name: "byUser", fields: ["userId"])
+@key(name: "byAmbulance", fields: ["ambId", , "createdAt"]){
+  id: ID!
+  createdAt: ID!
+  userId: ID!
+  user: User @connection(fields: ["userId"])
+
+  ambId: ID,
+  ambNumber: String,
+  ambCall: String,
+  amb: Ambulance @connection(fields: ["ambId"])
+
+  originLatitude: Float,
+  originLongitude: Float,
+}
