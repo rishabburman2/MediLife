@@ -4,6 +4,7 @@ import Entypo from "react-native-vector-icons/Entypo"
 import CartScreen from '../screens/CartScreen';
 import ShopHomeStack from './ShopHomeStacker';
 import ShopCartStack from './ShopCartStacker';
+import Settings from '../screens/Settings';
 
 const Tab = createBottomTabNavigator();
 
@@ -33,7 +34,7 @@ const BottomTab = (props) => {
             />
             <Tab.Screen
                 name={"Menu"}
-                component={ShopHomeStack}
+                component={Settings}
                 options={{
                     tabBarIcon: ({ color }) => <Entypo name="menu" color={color} size={25} />
                 }}

@@ -34,9 +34,9 @@ const RootNavigator = (props) => {
                 <Drawer.Screen name={'Home'} component={HomeNavigator} />
                 <Drawer.Screen name={'Request Ambulance'} component={SearchScreen} />
                 <Drawer.Screen name={'Shop For Medicines'} component={ShopNavigator} />
-                <Drawer.Screen name={'Wallet'}>
+                {/* <Drawer.Screen name={'Wallet'}>
                     {() => <Dummy name={'Wallet'} />}
-                </Drawer.Screen>
+                </Drawer.Screen> */}
                 <Drawer.Screen name={'Settings'} component={Settings} />
             </Drawer.Navigator>
         </NavigationContainer>
