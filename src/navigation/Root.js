@@ -12,6 +12,7 @@ import SearchScreen from '../screens/SearchScreen';
 import CustomDrawer from './CustomDrawer';
 import Settings from '../screens/Settings';
 import ShopHomeScreen from '../screens/ShopHomeScreen';
+import ShopNavigator from './Shop';
 
 const Drawer = createDrawerNavigator();
 
@@ -32,7 +33,7 @@ const RootNavigator = (props) => {
             >
                 <Drawer.Screen name={'Home'} component={HomeNavigator} />
                 <Drawer.Screen name={'Request Ambulance'} component={SearchScreen} />
-                <Drawer.Screen name={'Shop For Medicines'} component={ShopHomeScreen} />
+                <Drawer.Screen name={'Shop For Medicines'} component={ShopNavigator} />
                 <Drawer.Screen name={'Wallet'}>
                     {() => <Dummy name={'Wallet'} />}
                 </Drawer.Screen>

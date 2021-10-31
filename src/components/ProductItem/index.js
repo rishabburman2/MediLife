@@ -1,13 +1,19 @@
 import React from "react";
-import { Text, View, Image } from "react-native";
+import { Text, View, Image, Pressable } from "react-native";
 import styles from "./styles";
 
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import { useNavigation } from "@react-navigation/native";
 
 const ProductItem = (props) => {
+    const navigation = useNavigation();
     const item = props.item;
+    const id = props.item.id
+    const onPressed = () => {
+        navigation.navigate('Product', { id });
+    }
     return (
-        <View style={styles.root}>
+        <Pressable style={styles.root} onPress={onPressed} >
             <Image style={styles.img} source={item.img} />
             <View style={styles.textContainer}>
                 <Text style={{ color: '#fff', fontSize: 18, marginTop: 5 }}>{item.title}</Text>
@@ -30,7 +36,7 @@ const ProductItem = (props) => {
                     {item.oldPrice && (<Text style={{ fontSize: 13, fontWeight: 'normal', textDecorationLine: 'line-through' }}>₹{item.oldPrice}</Text>)}
                 </Text>
             </View>
-        </View >
+        </Pressable >
     );
 };
 
